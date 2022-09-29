@@ -25,10 +25,14 @@ public class Ex02_UserInfo extends HttpServlet {
 		
 		String job = request.getParameter("job");
 		String gender = request.getParameter("gender");
-		String hobby = request.getParameter("hobby");
-
-		System.out.println(job);
-		System.out.println(gender);
-		System.out.println(hobby);
+		String[] hobby = request.getParameterValues("hobby");
+		
+		out.print("<div><h1>직업 >> " + job + "</h1></div>");
+		out.print("<div><h1>성별 >> " + gender + "</h1></div>");
+		out.print("<div><h1>취미 >> ");
+		for(String type : hobby) {
+			out.print(type + " ");
+		}
+		out.print("</h1></div>");
 	}
 }
