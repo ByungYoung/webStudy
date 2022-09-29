@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Table")
-public class Ex02_Table extends HttpServlet {
+@WebServlet("/DataSend")
+public class Ex03_DataSend extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -18,22 +18,22 @@ public class Ex02_Table extends HttpServlet {
 		// encoding table
 		response.setContentType("text/html;charset=euc-kr");
 
+		// 1. Get Request data
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+
 		// Use response Object
 		PrintWriter out = response.getWriter();
 
-		// create table
-		out.print("<table border = '1px solid black', bgcolor = lightgray>");
-
-		for (int dan = 3; dan < 7; dan++) {
-			// create table row
-			out.print("<tr>");
-			for (int i = 1; i < 10; i++) {
-				// create table data
-				out.print("<td>" + dan + " * " + i + " = " + dan * i + "</td>");
-			}
-			out.print("</tr>");
-		}
-
-		out.print("</table>");
+		String[] login = { id, pw };
+		
+		// 2. 화면에 h2 태그 활용하여 id,pw 출력
+		out.print("<h2>" +"id = "+ login[0] + "</h2>");
+		out.print("<h2>" +"pw = "+ login[1] + "</h2>");
+		
+		if(id.equals("smhrd") && pw.equals("12345"))
+			out.print("로그인 성공!");
+		else
+			out.print("로그인 실패");
 	}
 }

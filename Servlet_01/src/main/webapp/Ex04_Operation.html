@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Operator</title>
+</head>
+<body>
+	<!--Servlet 으로 데이터 전송 -->
+	<!-- 데이터 전송의 조건 : where to send (action), what to send(name), when to send(submit)-->
+	<form action="Operation">
+		<div>
+			<input type = "text" name = "no1">
+			
+			<select name = "op">
+				<option value = ""></option>
+				<option value = "+">+</option>
+				<option value = "-">-</option>
+				<option value = "*">*</option>
+				<option value = "/">/</option>
+				<option value = "%">%</option>
+			</select>
+			<input type = "text" name = "no2">
+			
+			<input type = "submit" value = "계산">
+		</div>
+	</form>
+</body>
+</html>
