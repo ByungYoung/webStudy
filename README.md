@@ -1,4 +1,3 @@
-# webStudy
 # servlet = Server + Applet
 
 * 데이터 전송방식
