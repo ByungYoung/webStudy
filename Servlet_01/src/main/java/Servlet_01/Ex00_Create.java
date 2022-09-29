@@ -8,35 +8,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// 1. Url Mapping : UrlÀÇ °£·«È­, º¸¾È
+// 1. Url Mapping : Urlì˜ ê°„ëžµí™”, ë³´ì•ˆ
 @WebServlet("/create")
 public class Ex00_Create extends HttpServlet {
-	// 2. UID : Å¬·¡½º ÆÄÀÏÀÌ ÄÄÆÄÀÏ(º¯È¯)µÇ´Â °úÁ¤¿¡¼­ Servlet ¸í½Ã ID ¿ªÇÒ
-	// --> Áö¿öµµ »ó°ü ¾øÀ½. ¿¡·¯ ¹ß»ýÀÇ ¿äÀÎÀÌ µÉ ¼ö ÀÖÀ½.
+	// 2. UID : í´ëž˜ìŠ¤ íŒŒì¼ì´ ì»´íŒŒì¼(ë³€í™˜)ë˜ëŠ” ê³¼ì •ì—ì„œ Servlet ëª…ì‹œ ID ì—­í• 
+	// --> ì§€ì›Œë„ ìƒê´€ ì—†ìŒ. ì—ëŸ¬ ë°œìƒì˜ ìš”ì¸ì´ ë  ìˆ˜ ìžˆìŒ.
 	private static final long serialVersionUID = 1L;
     
-	// 3. ±âº» »ý¼ºÀÚ
+	// 3. ê¸°ë³¸ ìƒì„±ìž
     public Ex00_Create() {
         super();
-        System.out.println("»ý¼ºÀÚ È£Ãâ");
+        System.out.println("ìƒì„±ìž í˜¸ì¶œ");
     }
 
-    // 4. Initialize : ÃÊ±âÈ­ ¸Þ¼Òµå
+    // 4. Initialize : ì´ˆê¸°í™” ë©”ì†Œë“œ
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("Servlet ÃÊ±âÈ­");
+		System.out.println("Servlet ì´ˆê¸°í™”");
 	}
 
-	// 5. destroy : ¼Ò¸êÀÚ ¸Þ¼Òµå
+	// 5. destroy : ì†Œë©¸ìž ë©”ì†Œë“œ
 	public void destroy() {
-		System.out.println("Servlet ¼Ò¸ê");
+		System.out.println("Servlet ì†Œë©¸");
 	}
 
-	// 6. ¿äÃ»ÀÌ µé¾î¿À¸é ½ÇÇàµÇ´Â ¸Þ¼Òµå(¼­ºñ½º Á¦°ø) -> Get,Post ¹æ½Ä ±¸ºÐÇÏÁö ¾ÊÀ½
+	// 6. ìš”ì²­ì´ ë“¤ì–´ì˜¤ë©´ ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œ(ì„œë¹„ìŠ¤ ì œê³µ) -> Get,Post ë°©ì‹ êµ¬ë¶„í•˜ì§€ ì•ŠìŒ
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Service È£Ãâ");
+		System.out.println("Service í˜¸ì¶œ");
 	}
 
-	// 7. ¿äÃ» ¹æ½Ä¿¡ µû¶ó ½ÇÇàµÇ´Â ¸Þ¼Òµå(Get, Post ¹æ½Ä) -> service·Î »ç¿ë
+	// 7. ìš”ì²­ ë°©ì‹ì— ë”°ë¼ ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œ(Get, Post ë°©ì‹) -> serviceë¡œ ì‚¬ìš©
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

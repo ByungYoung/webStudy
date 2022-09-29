@@ -27,13 +27,13 @@ public class Ex03_DataSend extends HttpServlet {
 
 		String[] login = { id, pw };
 		
-		// 2. È­¸é¿¡ h2 ÅÂ±× È°¿ëÇÏ¿© id,pw Ãâ·Â
+		// 2. í™”ë©´ì— h2 íƒœê·¸ í™œìš©í•˜ì—¬ id,pw ì¶œë ¥
 		out.print("<h2>" +"id = "+ login[0] + "</h2>");
 		out.print("<h2>" +"pw = "+ login[1] + "</h2>");
 		
 		if(id.equals("smhrd") && pw.equals("12345"))
-			out.print("·Î±×ÀÎ ¼º°ø!");
+			out.print("ë¡œê·¸ì¸ ì„±ê³µ!");
 		else
-			out.print("·Î±×ÀÎ ½ÇÆĞ");
+			out.print("ë¡œê·¸ì¸ ì‹¤íŒ¨");
 	}
 }

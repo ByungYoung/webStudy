@@ -16,9 +16,9 @@ public class Ex01_Print extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// request : Client ¿äÃ»¿¡ ´ëÇÑ Á¤º¸°¡ µé¾îÀÖ´Â Object
-		// response : ÀÀ´ä¿¡ ´ëÇÑ Á¤º¸°¡ µé¾îÀÖ´Â °´Ã¼
-		// ** ¿äÃ»ÀÌ µé¾î¿À¸é ¹İµå½Ã ÀÀ´äÇØ ÁÖ¾î¾ß ÇÑ´Ù. **
+		// request : Client ìš”ì²­ì— ëŒ€í•œ ì •ë³´ê°€ ë“¤ì–´ìˆëŠ” Object
+		// response : ì‘ë‹µì— ëŒ€í•œ ì •ë³´ê°€ ë“¤ì–´ìˆëŠ” ê°ì²´
+		// ** ìš”ì²­ì´ ë“¤ì–´ì˜¤ë©´ ë°˜ë“œì‹œ ì‘ë‹µí•´ ì£¼ì–´ì•¼ í•œë‹¤. **
 		
 		// 1. Print to webPages
 		
@@ -33,7 +33,7 @@ public class Ex01_Print extends HttpServlet {
 		
 		//	1-3) list
 		//	1-4) Use Array to String
-		String[] names = {"¹Úº´¿µ", "ÀÌ¿µ±¤", "Á¤´ÙÀº", "±è¼­Àº", "±èÀ¯Áø"};
+		String[] names = {"ë°•ë³‘ì˜", "ì´ì˜ê´‘", "ì •ë‹¤ì€", "ê¹€ì„œì€", "ê¹€ìœ ì§„"};
 
 		out.print("<ul>");
 		for (String string : names) {
