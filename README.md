@@ -1,5 +1,5 @@
-# Servlet
-  * Server + Applet
+# JSP / Servlet
+* Servlet = Server + Applet
 
 * Settings
 ```
