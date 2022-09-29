@@ -1,4 +1,5 @@
-# servlet = Server + Applet
+# Servlet
+  * Server + Applet
 
 * Settings
 ```
