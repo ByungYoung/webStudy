@@ -70,3 +70,16 @@ delete : 데이터 삭제 요청
 3. 전송하는 데이터의 길이에 제한이 없음
 4. 캐싱할 수 없음 (보안에 강함)
 ```
+
+* Servlet에서 요청 값을 가져오는 방법
+```
+1. 요청과 관련된 데이터 객체 : request
+2. post 방식으로 한글값을 받아오는 경우 한글 인코딩
+-> request.setCharacterEncoding("UTF-8")
+3. 값 꺼내오기
+-> String name = request.getParameter("name값");
+4. 숫자 값변환
+-> Integer.parseInt(name)
+5. checkbox와 같이 동일한 name값을 갖는 여러개의 데이터를 받아오는 방법
+-> String[] hobby = request.getParamterValues("hobby")
+```
