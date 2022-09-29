@@ -5,12 +5,16 @@
 <title>Login Page</title>
 </head>
 <body>
-	<form action = "Login">
+	<!-- 
+		form method attribute : 데이터를 전송하는 방식지정 (get, post)
+												(default = get)
+	 -->
+	<form action = "Login" method = "post">
 		<div>
-			ID : <input type = "text", name = "id">
+			ID : <input type = "text" name = "id">
 		</div>
 		<div>
-			PW : <input type = "password", name = "pw">
+			PW : <input type = "password" name = "pw">
 		</div>
 		<div>
 			<input type = "submit" value = "login">
