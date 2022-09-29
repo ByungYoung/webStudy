@@ -2,6 +2,7 @@ package Servlet_01;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +21,10 @@ public class Ex01_Print extends HttpServlet {
 		// ** 요청이 들어오면 반드시 응답해 주어야 한다. **
 		
 		// 1. Print to webPages
+		
+		// 2. Encoding to Korean utf-8
+		response.setContentType("text/html;charset=euc-kr");
+	
 		// 	1-1) import PrintWriter (to webPages)
 		PrintWriter out = response.getWriter();
 		
@@ -27,6 +32,13 @@ public class Ex01_Print extends HttpServlet {
 		out.print("<h1>hello world</h1>");
 		
 		//	1-3) list
-		out.print("<ul><li>park</li><li>이영광</li><li>정다은</li><li>김서은</li><li>김유진</li></ul>");
+		//	1-4) Use Array to String
+		String[] names = {"박병영", "이영광", "정다은", "김서은", "김유진"};
+
+		out.print("<ul>");
+		for (String string : names) {
+			out.print("<li>" + string + "</li>");
+		}
+		out.print("</ul>");
 	}
 }
