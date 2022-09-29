@@ -58,7 +58,8 @@ delete : 데이터 삭제 요청
 ```
 1. URL에 데이터를 포함시켜 요청 (Query String 방식)
 2. 데이터를 패킷의 Header에 포함하여 전송
-3. 전송하는 데이터의 길이에 한계 (1024 Byte)
+3. 전송하는 데이터의 길이에 한계
+-> Google Chrome allows the maximum length of the URL to be of the size 2MB (2,097,152 characters)
 4. 캐싱 가능함 (보안에 취약함)
 ```
 
