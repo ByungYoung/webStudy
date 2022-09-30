@@ -1,4 +1,4 @@
-# Servlet
+# Servlet (Server Applet)
 * Web Dynamic Project
 ```
 * target runtime 이 설정한 server 확인
