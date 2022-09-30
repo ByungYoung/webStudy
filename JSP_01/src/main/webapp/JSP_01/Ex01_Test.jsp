@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ex01_Test</title>
+<title>Test</title>
 </head>
 <body>
 	<h1>Hello world</h1>

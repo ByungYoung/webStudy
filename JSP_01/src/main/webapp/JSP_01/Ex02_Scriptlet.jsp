@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ex02_Scriptlet</title>
+<title>Scriptlet</title>
 </head>
 <body>
 	<!-- 1. 스크립트릿 : Scriptlet -->
