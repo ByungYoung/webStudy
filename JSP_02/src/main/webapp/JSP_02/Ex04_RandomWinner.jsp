@@ -8,7 +8,7 @@
 <title>Random</title>
 </head>
 <body>
-	<fieldset>
+	<fieldset align = "center">
 		<legend>랜덤 당첨 결과</legend>
 		<%
 			request.setCharacterEncoding("UTF-8");
@@ -19,7 +19,13 @@
 		%>
 		<h1><%=subject %></h1>
 		<h1><%=values[rand] %></h1>
-
+		<%
+			// 값 확인하기
+			for(String value : values){
+				System.out.print(value + " ");
+			}
+			System.out.println("랜덤 값 : " + rand + " 결과 값 : " + values[rand]);
+		%>
 	</fieldset>
 </body>
 </html>

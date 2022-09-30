@@ -7,9 +7,9 @@
 <title>Create Input</title>
 </head>
 <body>
-	<fieldset>
-		<legend>랜덤당첨 작성</legend>
-		<form action = "Ex04_RandomWinner.jsp" method = "post">
+	<fieldset align = "center">
+		<legend>랜덤 값 작성</legend>
+		<form action = "Ex04_RandomWinner.jsp" method = "post" align = "center">
 			주제 : <input type = "text" name = "subject">
 			<br>
 			<%
