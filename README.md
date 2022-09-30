@@ -1,6 +1,6 @@
 # JSP / Servlet
 * Servlet = Server + Applet
-
+* JSP = Java Server Page
 * Settings
 ```
 1. apache tomcat : 오픈소스, 다양한 모듈, 소스코드 많음
