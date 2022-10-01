@@ -19,9 +19,7 @@
 	<h3>최근 본 상품</h3>
 	<%
 		Cookie[] item = request.getCookies();
-		if(item.length == 0){
-			
-		}else{
+		if(item != null) {
 			for(Cookie c : item){
 				// Cookie의 이름 가져오기
 				String name = c.getName();
@@ -30,11 +28,11 @@
 				String value = c.getValue();
 				
 				// Value 디코딩 (URLDecoder (대상, 인코딩 방식))
-				String Dvalue = URLDecoder.decode(value, "UTF-8");
+				String dVal = URLDecoder.decode(value, "UTF-8");
 				
 				if(name.contains("_name"))
 				// 페이지에 출력
-					out.print("<h3> " + Dvalue + "</p> <h3>");
+					out.print("<p> " + dVal + "</p> <br>");
 			}
 		}
 	%>

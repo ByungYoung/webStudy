@@ -14,7 +14,8 @@
 	<a href = "Ex04_list.jsp">제품 목록 페이지</a>
 	
 	<%
-		String enc = URLEncoder.encode("마우스", "UTF-8");
+		String item = "로지텍 게이밍 마우스";
+		String enc = URLEncoder.encode(item, "UTF-8");
 		Cookie name = new Cookie("mouse_name", enc);
 		name.setMaxAge(1*60*30);
 		response.addCookie(name);

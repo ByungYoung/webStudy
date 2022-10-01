@@ -10,10 +10,10 @@
 	<fieldset>
 		<legend>로그인 성공</legend>
 		<%
-			String id = request.getParameter("id");
+			String id = (String)session.getAttribute("id");
 		%>
 		<h1><%=id %>님 환영합니다!!</h1>
-		<a href = "Ex06_Login.html">로그아웃</a>
+		<a href = "Ex06_Logout.jsp">로그아웃</a>
 	</fieldset>
 </body>
 </html>

@@ -12,8 +12,10 @@
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		if(id.equals("smart") && pw.equals("123"))
-			response.sendRedirect("Ex06_LoginSuccess.jsp?id=" + id);
+		if(id.equals("smart") && pw.equals("123")){
+			session.setAttribute("id", id);
+			response.sendRedirect("Ex06_LoginSuccess.jsp");
+		}
 		else
 			response.sendRedirect("Ex06_LoginFail.jsp");
 	%>
