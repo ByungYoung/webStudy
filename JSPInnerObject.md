@@ -31,7 +31,7 @@ Web Brower 종료 또는 설정 시간 동안
 
 *Applicatoin Scope
 ```
-애플리케이션 내의 모든 부분내에서
--> Type (application : Application)
+tomcat 실행하는 동안 어디서나 사용가능
+-> Type (application : ApplicationContext)
  : 공지 작성용으로 사용
 ```
