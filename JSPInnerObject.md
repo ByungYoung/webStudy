@@ -35,3 +35,17 @@ tomcat 실행하는 동안 어디서나 사용가능
 -> Type (application : ApplicationContext)
  : 공지 작성용으로 사용
 ```
+
+* Redirct
+```
+1. 요청/응답 2번
+2. request 한번 초기화
+3. 외부 서버로 요청 가능
+```
+
+* Forward
+```
+1. 요청/응답 1번
+2. request 유지 가능
+3. 프로젝트 내에서만 
+```
