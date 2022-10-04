@@ -12,7 +12,7 @@
 	<form action = "JoinProgram.jsp" method = "post">
 		ID >> <input type = "text" name = "id">
 		<br>
-		PW >> <input type = "text" name = "pw">
+		PW >> <input type = "password" name = "pw">
 		<br>
 		NAME >> <input type = "text" name = "name">
 		<br>

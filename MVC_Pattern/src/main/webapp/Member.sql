@@ -16,3 +16,5 @@ insert into aimember values(
 )
 
 select * from aimember
+
+delete from aimember where id = 'smhrd'

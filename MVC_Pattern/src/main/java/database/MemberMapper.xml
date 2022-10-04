@@ -16,7 +16,7 @@
  	DAO와 xml은 다른 확장자
  	: 값을 주고 받기 위해 정확한 매개변서명, 결과 자료형 지정	
   -->
-  <insert id="join" parameterType="model.AiMember">
+  <insert id = "join" parameterType = "model.AiMember">
   	insert into aimember
   	<!-- 
   		getter가 있어야 함.
@@ -24,4 +24,16 @@
   	 -->
   	values(#{id}, #{pw}, #{name}, #{age})
   </insert>
+  
+  <!-- 
+  	resultType 작동원리
+  	 : AiMember member = new AiMember();
+  	 : 기본생성자를 사용해서 객체 생성
+  	 : 결과값을 setter 메소드를 사용하여 바안딩
+  	 -> 주의점 : 기본 생성자가 없다면, error 발생
+  -->
+  
+  <select id = "login" resultType="model.AiMember" parameterType = "model.AiMember">
+  	select * from aimember where id = #{id} and pw = #{pw}
+  </select>
 </mapper>
