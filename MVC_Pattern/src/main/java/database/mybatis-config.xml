@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- What is xml? : 서로 다른 파일간의 데이터 전달 및 저아하는 데이터 구조를 기술하기 위한 파일 -->
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 1) dtd : document type defination -->
+
+<configuration>
+
+	<!-- 2) DB 연결과 관련된 정보 기술 -->
+
+	<environments default="development">
+		<environment id="development">
+
+			<!-- 3) default : environment의 id값을 기준으로 잡아주는 것 database connection이 여러개 
+				있을때, 어떤 값을 기준값으로 할 것인지 정해주는 역할 -->
+
+			<transactionManager type="JDBC" />
+
+			<!-- 4) transaction 관리자 생성 
+			type = 1. JDBC ( commit, rollback Mybatis 자체적으로 관리 )
+				   2. MANAGED ( commit, rollback server tomcat 관리 ) -->
+
+			<dataSource type="POOLED">
+
+				<!-- 5) dataSource : DB Connection 생성 
+				type = 1. POOLED ( 미리 객체를 생성하고 필요할때 마다 사용할 수 있게 끔 제공 )
+					   2. UNPOOLED ( 요청이 들어올 때 객체를 생성 ) -->
+
+				<property name="driver"
+					value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="hr" />
+				<property name="password" value="hr" />
+
+				<!-- 6) properties : DB Connection을 생성하기 위해 필요한 정보 기술 -->
+
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+	
+	<!-- SQL 구문이 있는 mapper 연결하기 -->
+	
+		<mapper resource="database/MemberMapper.xml" />
+	</mappers>
+</configuration>

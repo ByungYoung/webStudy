@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 1) Mapper와 관련된 태그를 사용할 수 있는 dtd 부터 설정하기 -->
+
+<mapper namespace="model.DAO">
+<!-- 2) Mapper 파일은 여러개가 될 수 있다.
+		namespace : mapper 파일을 식별할 수 있는 고유의 식별값 ( primary )
+	 	namespace에는 내가 연결하고 싶은 DAO 풀네임을 적는다.-->
+	 	
+	 	
+  <!-- 
+  	SQL구문 작성구간
+ 	DAO와 xml은 다른 확장자
+ 	: 값을 주고 받기 위해 정확한 매개변서명, 결과 자료형 지정	
+  -->
+  <insert id="join" parameterType="model.AiMember">
+  	insert into aimember
+  	<!-- 
+  		getter가 있어야 함.
+  		#{varname} = getVarname()
+  	 -->
+  	values(#{id}, #{pw}, #{name}, #{age})
+  </insert>
+</mapper>
