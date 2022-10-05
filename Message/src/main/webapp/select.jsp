@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.WebMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 1.request영역에 저장된 정보를 가져오시오. -->
@@ -14,6 +16,7 @@
 <style>
 </style>
 <body style="text-align: center;">
+	<%List<WebMember> list = (List)request.getAttribute("list"); %>
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Menu -->
@@ -28,6 +31,13 @@
 				<td>Address</td>
 			</tr>
 			<!-- 2.모든 회원의 이메일(email),전화번호(tel),주소(address)를 출력하시오. -->
+			<%for(WebMember m : list) { %>
+				<tr>
+					<td><%=m.getEmail() %></td>
+					<td><%=m.getTel() %></td>
+					<td><%=m.getAddress() %></td>
+				</tr>
+			<%} %>
 		</table>
 		</nav>
 		<a href="main.jsp" class="button next scrolly">되돌아가기</a>

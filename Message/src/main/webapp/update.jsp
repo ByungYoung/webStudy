@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.WebMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -13,23 +14,23 @@
 <style>
 </style>
 <body style="text-align: center;">
-
+	<% WebMember vo = (WebMember)session.getAttribute("vo"); %>
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Menu -->
 		<nav id="Update">
 		<ul class="actions vertical">
 			<li><h5>회원정보수정</h5></li>
-			<form>
-				<li>접속한 Email : 세션영역에 저장된 email을 출력하시오.</li>
-				<li><input type="password" placeholder="PW를 입력하세요"
-					style="width: 500px; margin: 0 auto;"></li>
-				<li><input type="text" placeholder="전화번호를 입력하세요"
-					style="width: 500px; margin: 0 auto;"></li>
-				<li><input type="text" placeholder="집주소를 입력하세요"
-					style="width: 500px; margin: 0 auto;"></li>
-				<li><input type="submit" value="JoinUs" class="button fit"
-					style="width: 500px; margin: 0 auto;"></li>
+			<form action = "UpdateCon">
+				<%if(vo != null) { %>
+					<li>접속한 Email : <%=vo.getEmail() %></li>
+				<% }else{ %>
+					<li>접속한 Email : 세션영역에 저장된 email을 출력하시오.</li>
+				<% } %>
+				<li><input type="password" placeholder="PW를 입력하세요" name = "pw" style="width: 500px; margin: 0 auto;"></li>
+				<li><input type="text" placeholder="전화번호를 입력하세요" name = "tel" style="width: 500px; margin: 0 auto;"></li>
+				<li><input type="text" placeholder="집주소를 입력하세요"	name = "address" style="width: 500px; margin: 0 auto;"></li>
+				<li><input type="submit" value="JoinUs" class="button fit" style="width: 500px; margin: 0 auto;"></li>
 			</form>
 		</ul>
 		</nav>

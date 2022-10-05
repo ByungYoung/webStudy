@@ -13,6 +13,6 @@ CREATE TABLE web_number(
 	address varchar2(50) not null
 )
 
-select * from WEB_NUMBER
+select * from WEB_NUMBER where email != 'admin'
 
 select * from web_number where email = 0 and pw = 0

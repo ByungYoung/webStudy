@@ -8,7 +8,10 @@
 <!-- 1) dtd : document type defination -->
 
 <configuration>
-
+	<typeAliases>
+		<!-- 사용자 정의 자료형 -> 별칭 부여 -->
+		<typeAlias type="com.smhrd.model.WebMember" alias="WebMember"/>
+	</typeAliases>
 	<!-- 2) DB 연결과 관련된 정보 기술 -->
 
 	<environments default="development">
