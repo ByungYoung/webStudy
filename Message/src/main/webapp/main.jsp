@@ -18,7 +18,7 @@
 						<nav>
 						<% if(vo != null){ %>
 								<a href="#">개인정보수정</a>
-								<a href="Logout.jsp">로그아웃</a>
+								<a href="LogoutCon">로그아웃</a>
 						<% } else { %>
 								<a href="#menu">로그인</a>
 						<% } %>
