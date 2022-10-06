@@ -18,11 +18,11 @@
 						<nav>
 						<% if(vo != null){ %>
 							<%if (vo.getEmail().equals("admin")){ %>
-								<a href="SelectCon">회원관리</a>						
+								<a href="SelectCon.do">회원관리</a>						
 							<% }else{ %>
 								<a href="update.jsp">개인정보수정</a>
 							<% } %>
-								<a href="LogoutCon">로그아웃</a>
+								<a href="LogoutCon.do">로그아웃</a>
 						<% } else { %>
 								<a href="#menu">로그인</a>
 						<% } %>
@@ -34,7 +34,7 @@
 					<nav id="menu">	
 						<ul class="links">
 							<li><h5>로그인</h5></li>
-								<form action = "LoginCon" method = "post">
+								<form action = "LoginCon.do" method = "post">
 									<li><input type="text"  placeholder="Email을 입력하세요" name = "email"></li>
 									<li><input type="password"  placeholder="PW를 입력하세요" name = "pw"></li>
 									<li><input type="submit" value="LogIn" class="button fit"></li>
@@ -42,7 +42,7 @@
 						</ul>
 						<ul class="actions vertical">
 							<li><h5>회원가입</h5></li>
-								<form action = "JoinCon" method = "post">
+								<form action = "JoinCon.do" method = "post">
 									<li><input type="text"  placeholder="Email을 입력하세요" name="email"></li>
 									<li><input type="password"  placeholder="PW를 입력하세요" name="pw"></li>
 									<li><input type="text"  placeholder="전화번호를 입력하세요" name="tel"></li>
