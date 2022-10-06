@@ -16,6 +16,3 @@ CREATE TABLE web_number(
 select * from WEB_NUMBER where email != 'admin'
 
 select * from web_number
-
-UPDATE WEB_NUMBER SET PW = '1', TEL = '2',ADDRESS = '3'
-WHERE EMAIL = 'panda10373@gmail.com'

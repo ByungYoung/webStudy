@@ -35,7 +35,7 @@ public class JoinCon implements Command {
 		int row = dao.join(vo);
 		
 		if(row > 0) {
-			RequestDispatcher rd = request.getRequestDispatcher("join_success.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/join_success.jsp");
 			request.setAttribute("email", email);
 			rd.forward(request, response);
 		}

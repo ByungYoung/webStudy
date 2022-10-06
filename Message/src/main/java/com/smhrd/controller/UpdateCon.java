@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,8 +32,9 @@ public class UpdateCon implements Command {
 		DAO dao = new DAO();
 		int row = dao.update(vo);
 		
-		if(row > 0) {
-			response.sendRedirect("main.jsp");
+		if(row > 0) {		
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/main.jsp");
+			rd.forward(request, response);
 		} else System.out.println("Update Failed...");
 	}
 }

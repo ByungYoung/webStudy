@@ -21,7 +21,7 @@ public class SelectCon implements Command {
 
 		request.setAttribute("list", list);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/select.jsp");
 		rd.forward(request, response);
 	}
 }

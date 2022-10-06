@@ -20,7 +20,7 @@
 							<%if (vo.getEmail().equals("admin")){ %>
 								<a href="SelectCon.do">회원관리</a>						
 							<% }else{ %>
-								<a href="update.jsp">개인정보수정</a>
+								<a href="MoveCon.do">개인정보수정</a>
 							<% } %>
 								<a href="LogoutCon.do">로그아웃</a>
 						<% } else { %>
@@ -57,10 +57,20 @@
 						<div class="inner">
 							<header class="major">
 								<% if(vo != null) { %>
-									<h1><%=vo.getEmail() %>님 환영합니다.</h1>									
-								<%}else{ %>
+									<h1>
+									<% 
+										String name = vo.getEmail();
+										if(name.contains("@")){
+											// 이메일 계정이라면 @ 앞부분의 아이디만 출력
+											// 이메일 계정이 아니라면 아이디를 바로 출력
+											int index = name.indexOf("@");
+											name = name.substring(0,index);
+										}
+									%>
+									<%=name %>님 환영합니다.</h1>									
+								<% }else{ %>
 									<h1>로그인 한 세션아이디를 출력해주세요</h1>
-								<%} %>
+								<% } %>
 								<!-- 로그인 후 로그인 한 사용자의 세션아이디로 바꾸시오.
 									 ex)smart님 환영합니다 -->
 							</header>
