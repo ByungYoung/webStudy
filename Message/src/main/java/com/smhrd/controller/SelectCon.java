@@ -23,8 +23,9 @@ public class SelectCon extends HttpServlet {
 		DAO dao = new DAO();
 		
 		List<WebMember> list = dao.selectAll();
-		System.out.println(list);
+
 		request.setAttribute("list", list);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
 		rd.forward(request, response);
 	}

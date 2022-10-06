@@ -21,7 +21,7 @@
 		<nav id="Update">
 		<ul class="actions vertical">
 			<li><h5>회원정보수정</h5></li>
-			<form action = "UpdateCon">
+			<form action = "UpdateCon" method = "post">
 				<%if(vo != null) { %>
 					<li>접속한 Email : <%=vo.getEmail() %></li>
 				<% }else{ %>

@@ -28,7 +28,7 @@
   <update id = "update" parameterType = "com.smhrd.model.WebMember">
   	UPDATE WEB_NUMBER
 	SET
-	PW = #{pw} and TEL = #{tel} and ADDRESS = #{address}
+	PW = #{pw}, TEL = #{tel}, ADDRESS = #{address}
 	WHERE
 	EMAIL = #{email}
   </update>
