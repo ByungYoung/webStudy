@@ -4,19 +4,14 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.DAO;
 import com.smhrd.model.WebMember;
 
-@WebServlet("/JoinCon")
-public class JoinCon extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	protected void service(HttpServletRequest request, HttpServletResponse response)
+public class JoinCon implements Command {
+	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		// 0) 한글 인코딩
